@@ -1,6 +1,14 @@
-import saturn from '/src/assets/imgs/Background/Saturn.webp';
+import Image from 'next/image';
+import PropTypes from 'prop-types';
 
-function FaqAccordion() {
+// Images
+const saturn = '/assets/imgs/Background/Saturn.webp';
+
+FAQ.propTypes = {
+    preRegister: PropTypes.string.isRequired,
+};
+
+function FaqAccordion(props) {
     const faqs = [
         {
             question: 'What is a Hackathon? ',
@@ -16,7 +24,7 @@ function FaqAccordion() {
                 <>
                     Fill in{' '}
                     <a
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeU9aUxOy_6qdsvOSsVW1t91Z3ITRi5ziucR6b4joI-dKJLaQ/viewform"
+                        href={props.preRegister}
                         target="_blank"
                         className="text-[#c593e9] font-bold underline"
                     >
@@ -81,7 +89,7 @@ function FaqAccordion() {
     );
 }
 
-export default function FAQ() {
+export default function FAQ(props) {
     return (
         <>
             <div className="relative">
@@ -95,21 +103,26 @@ export default function FAQ() {
                     <p className="lg:text-xl sm:text-lg font-grotesk font-light text-pretty z-40">
                         If we missed anything, please contact us at{' '}
                         <a
-
                             href="mailto:hacker@hackhayward.com"
-
-  
                             className="font-bold text-[#c593e9] underline"
                         >
                             hacker@hackhayward.com
                         </a>
                     </p>
                 </div>
-                <FaqAccordion />
-                <div className="opacity-50 absolute top-0 right-[-10%] max-h-[40%] max-w-[40%] ">
-                    <img src={saturn} loading="lazy" alt="Saturn" className="object-cover" />
+                <FaqAccordion preRegister={props.preRegister}/>
+                <div className="opacity-50 absolute top-0 right-[-10%] max-h-[40%] max-w-[40%]">
+                    <Image
+                        src={saturn}
+                        alt="Saturn"
+                        className="object-cover"
+                        width={200}
+                        height={200}
+                        loading="lazy"
+                    />
                 </div>
             </div>
         </>
     );
 }
+

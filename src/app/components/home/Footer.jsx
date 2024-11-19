@@ -1,12 +1,9 @@
+import Image from "next/image";
 import PropTypes from 'prop-types';
-import logo from '/src/assets/imgs/others/Monotone Logo.webp';
+import { BiLogoDiscord, BiLogoInstagram, BiLogoLinkedinSquare } from 'react-icons/bi';
 
-import {
-    BiLogoDiscord,
-    BiLogoInstagram,
-    BiLogoLinkedinSquare,
-} from 'react-icons/bi';
-
+// Images
+const logo = '/assets/imgs/others/Monotone Logo.webp';
 
 Footer.propTypes = {
     preRegister: PropTypes.string.isRequired,
@@ -36,8 +33,9 @@ function SocialButtons() {
             {links.map((link, index) => (
                 <li key={index} className="px-2 lg:hover:scale-110 transition">
                     <a
-                        href={`${link.href}`}
-                        target="_blank" 
+                        href={link.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
                         aria-label={link.name}
                         className="text-white text-xl font-grotesk font-medium"
                     >
@@ -58,8 +56,7 @@ function NavButtons() {
                 <li key={index} className="px-2 lg:hover:scale-110 transition">
                     <a
                         href={`#${link.text.toLowerCase().replace(' ', '-')}`}
-                        className="text-white lg:text-lg text-sm font-grotesk
-                         font-bold text-nowrap"
+                        className="text-white lg:text-lg text-sm font-grotesk font-bold text-nowrap"
                     >
                         {link.text}
                     </a>
@@ -72,21 +69,22 @@ function NavButtons() {
 export default function Footer(props) {
     return (
         <footer className="bg-[#30252d] text-white">
-            <section className="navbar p-8 place-content-between max-lg:flex-col ">
+            <section className="navbar p-8 place-content-between max-lg:flex-col">
                 {/* Logo */}
                 <div className="max-lg:justify-center max-lg:pb-6">
                     <a
                         href="#home"
                         className="h-20 max-lg:h-16 max-sm:h-14 hover:scale-105 transition flex items-center"
                     >
-                        <img
+                        <Image
                             src={logo}
                             alt="HackHayward logo"
-                            className="h-full"
+                            className="w-16 md:w-20"
+                            width={74}
+                            height={74}
+                            loading="lazy"
                         />
-                        <p className="text-white text-xl font-exo2 font-medium pl-6">
-                            HackHayward
-                        </p>
+                        <p className="text-white text-xl font-exo2 font-medium pl-6">HackHayward</p>
                     </a>
                 </div>
                 {/* Socials */}
@@ -96,8 +94,7 @@ export default function Footer(props) {
                         <p className="lg:text-lg font-grotesk font-thin text-pretty text-white lg:text-end text-center">
                             Reach out to us at{' '}
                             <a
-                                href="mailto:hacker@hackhayward.com
-"
+                                href="mailto:hacker@hackhayward.com"
                                 className="font-bold text-[#c593e9] underline"
                             >
                                 hacker@hackhayward.com
@@ -116,8 +113,9 @@ export default function Footer(props) {
                 <div className="lg:navbar-start">
                     <a
                         href="https://static.mlh.io/docs/mlh-code-of-conduct.pdf"
-                        className="text-white lg:text-lg text-sm font-grotesk font-light max-sm:pb-6 underline	"
+                        className="text-white lg:text-lg text-sm font-grotesk font-light max-sm:pb-6 underline"
                         target="_blank"
+                        rel="noopener noreferrer"
                     >
                         MLH Code of Conduct
                     </a>
@@ -131,6 +129,7 @@ export default function Footer(props) {
                                 href={props.preRegister}
                                 className="bg-[#c593e9] hover:bg-[#cfb0e8] rounded-full p-3 transition text-white lg:text-lg text-sm font-grotesk font-medium text-nowrap"
                                 target="_blank"
+                                rel="noopener noreferrer"
                             >
                                 Pre-Register
                             </a>
@@ -139,9 +138,7 @@ export default function Footer(props) {
                 </nav>
             </section>
             <section className="flex justify-center bg-white text-black font-medium font-grotesk">
-                <p className="flex flex-row gap-2">
-                    Made with ❤️ by HackHayward
-                </p>
+                <p className="flex flex-row gap-2">Made with ❤️ by HackHayward</p>
             </section>
         </footer>
     );

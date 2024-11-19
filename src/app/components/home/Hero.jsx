@@ -7,7 +7,7 @@ import Image from 'next/image';
 // Images
 const heroMobile = '/assets/imgs/hero/HeroScene-mobile.webp';
 const heroDesktop = '/assets/imgs/hero/HeroScene.webp';
-const astro = '/public/assets/imgs/hero/Astro.webp';
+const astro = '/assets/imgs/hero/Astro.webp';
 
 Hero.propTypes = {
     preRegister: PropTypes.string.isRequired,
@@ -63,8 +63,8 @@ export default function Hero(props) {
                     </div>
                 </div>
                 {/* Artwork */}
-                <div className="col-[1/11] row-[1] place-self-end">
-                    <div className="relative">
+                <div className="w-full h-full col-[1/11] row-[1] place-self-end overflow-hidden">
+                    <div className="relative max-h-[calc(100vh-2rem)] w-full h-full">
                         <picture>
                             <source
                                 srcSet={heroMobile}
@@ -73,7 +73,7 @@ export default function Hero(props) {
                             <Image
                                 src={heroDesktop}
                                 alt="A space cave background scene with warm yellow lighting"
-                                className="object-contain max-h-[calc(100vh-2rem)]"
+                                className="object-contain object-right-bottom"
                                 layout="fill"
                                 priority
                             />
@@ -81,9 +81,9 @@ export default function Hero(props) {
                         <Image
                             src={astro}
                             alt="A cartoon astronaut falcon mascot in a space suit, floating in space"
-                            className="absolute bottom-[1%] right-[3%] h-[80%] w-[80%] object-contain animate-wiggle animate-infinite animate-duration-[10000ms] animate-delay-1000 animate-ease-in-out"
-                            width={500}
-                            height={500}
+                            className="object-contain animate-wiggle animate-infinite animate-duration-[10000ms] animate-delay-1000 animate-ease-in-out"
+                            layout="fill"
+                            priority
                         />
                     </div>
                 </div>

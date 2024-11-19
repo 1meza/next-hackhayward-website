@@ -45,13 +45,9 @@
       var(--tw-animate-iteration, 1);
 }
 
-
 /* Mobile View */
 @media screen and (max-width: 1023px) {
   /* Slash Left */
-
-
-
   .slash-l {
       clip-path: polygon(26% 1%, 100% 1%, 100% 101%, 0% 100%);
       -webkit-clip-path: polygon(26% 1%, 100% 1%, 100% 101%, 0% 100%);
@@ -159,7 +155,6 @@
       transform-origin: top;
   }
 }
-
 
 @-webkit-keyframes down-flip-moblie {
   0% {

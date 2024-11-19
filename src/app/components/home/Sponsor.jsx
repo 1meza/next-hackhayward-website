@@ -1,4 +1,6 @@
-import uranus from '/src/assets/imgs/Background/Uranus.webp';
+import Image from 'next/image';
+
+const uranus = '/assets/imgs/Background/Uranus.webp';
 
 export default function Sponsor() {
     return (
@@ -31,7 +33,14 @@ export default function Sponsor() {
                     </a>
                 </section>
                 <div className="opacity-50 absolute bottom-[30%] left-[-8%] max-h-[30%] max-w-[30%]">
-                    <img src={uranus} loading="lazy" alt="Uranus" className="object-cover" />
+                    <Image
+                        src={uranus}
+                        alt="Uranus"
+                        className="object-cover"
+                        width={200}
+                        height={200}
+                        loading="lazy"
+                    />
                 </div>
             </div>
         </>

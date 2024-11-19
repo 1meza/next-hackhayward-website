@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function MLH() {
     return (
         <>
@@ -7,10 +9,11 @@ export default function MLH() {
                 target="_blank"
                 className="absolute z-[70] w-28 max-sm:w-20 top-0 right-20 hidden"
             >
-                <img
+                <Image
                     src="src/assets/imgs/mlh-trust-badge-2025-white.svg"
                     alt="Major League Hacking 2025 Hackathon Season"
                     className="object-contain"
+                    layout="fill"
                 />
             </a>
         </>
