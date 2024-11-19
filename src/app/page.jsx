@@ -19,7 +19,7 @@ export default function Home() {
     useEffect(() => {
         setTimeout(() => {
             window.scrollTo(0, 0);
-        }, 100); // Timeout due to images/announcements not loading right away
+        }, 1000); // Timeout due to announcements not loading right away
     }, []);
 
     // Initialize Google Analytics

@@ -1,5 +1,3 @@
-import Image from 'next/image';
-
 // Images
 const mars = '/assets/imgs/Background/Mars.webp';
 const scene2 = '/assets/imgs/Scene2/s2Full.webp';
@@ -23,27 +21,23 @@ export default function AboutUs() {
                             ideate, create, and pitch their solutions to tackle
                             real-world issues within a 24-hour timeframe. Our
                             hackathon will be hosted in person at California
-                            State University, East Bay during Spring 2025, and
+                            State University, East Bay during March 2025, and
                             we are expecting over 200 participants.
                         </p>
                     </article>
                     <div className="z-20">
-                        <Image
+                        <img
                             src={scene2}
                             alt="The cartoon space falcon being escorted by green owl-like aliens through the hallway after being kidnapped"
                             className="rounded-md shadow-lg shadow-cyan-500/50"
-                            width={500}
-                            height={300}
                             loading="lazy"
                         />
                     </div>
                     <div className="opacity-50 absolute top-[10%] right-[-5%] h-[10%] w-[10%]">
-                        <Image
+                        <img
                             src={mars}
                             alt="Mars"
                             className="object-cover"
-                            width={150}
-                            height={150}
                             loading="lazy"
                         />
                     </div>
@@ -51,12 +45,10 @@ export default function AboutUs() {
 
                 <section className="grid xl:grid-cols-2 items-center gap-4 text-white mt-4 justify-items-center max-w-7xl">
                     <div className="z-20">
-                        <Image
+                        <img
                             src={scene3}
                             alt="The cartoon space falcon sitting on the spaceship, watching the yellow robot navigate the spacecraft"
                             className="rounded-md shadow-lg shadow-cyan-500/50"
-                            width={500}
-                            height={300}
                             loading="lazy"
                         />
                     </div>
@@ -76,12 +68,10 @@ export default function AboutUs() {
                         </p>
                     </article>
                     <div className="opacity-50 absolute bottom-[45%] left-[-15%] max-h-[30%] max-w-[30%] z-10">
-                        <Image
+                        <img
                             src={jupiter}
                             alt="Jupiter"
                             className="object-cover"
-                            width={150}
-                            height={150}
                             loading="lazy"
                         />
                     </div>

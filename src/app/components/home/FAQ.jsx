@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import PropTypes from 'prop-types';
 
 // Images
@@ -60,7 +59,7 @@ function FaqAccordion(props) {
         },
         {
             question: 'What is HackHayward?',
-            answer: 'The first hackathon in Hayward, organized by CSU East Bay Students for all students in the Bay Area due to take place this coming Spring! Aimed towards spreading awareness for marginalized communities, we are open to everyone!',
+            answer: 'The first hackathon in Hayward, organized by CSU East Bay Students for all students in the Bay Area due to take place this coming March! Aimed towards spreading awareness for marginalized communities, we are open to everyone!',
         },
 
         {
@@ -112,12 +111,10 @@ export default function FAQ(props) {
                 </div>
                 <FaqAccordion preRegister={props.preRegister}/>
                 <div className="opacity-50 absolute top-0 right-[-10%] max-h-[40%] max-w-[40%]">
-                    <Image
+                    <img
                         src={saturn}
                         alt="Saturn"
                         className="object-cover"
-                        width={200}
-                        height={200}
                         loading="lazy"
                     />
                 </div>

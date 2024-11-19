@@ -1,6 +1,5 @@
 'use client'
 
-import Image from 'next/image';
 import MLH from './MLH';
 
 // Images
@@ -28,19 +27,16 @@ function NavButtons() {
 export default function NavBar() {
     return (
         <>
-            <nav className="navbar absolute z-[9999] p-5 md:p-10">
+            <nav className="navbar absolute z-[9999] lg:p-10">
                 <div className="max-lg:flex-1">
                     <a
                         href="#home"
                         className="max-lg:h-20 max-sm:h-16 hover:scale-110 transition"
                     >
-                        <Image
+                        <img
                             src={logo}
                             alt="HackHayward logo"
-                            className="w-16 md:w-20"
-                            width={74}
-                            height={74}
-                            priority
+                            className="w-14 md:w-20"
                         />
                     </a>
                 </div>
@@ -59,12 +55,10 @@ export default function NavBar() {
                             className="btn btn-ghost lg:hidden hover:rotate-90"
                         >
                             <div className="indicator">
-                                <Image
+                                <img
                                     src={hamburger}
                                     alt="Menu"
                                     className="h-8 w-8"
-                                    width={32}
-                                    height={32}
                                 />
                             </div>
                         </div>

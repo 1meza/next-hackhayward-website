@@ -2,7 +2,6 @@
 
 import PropTypes from 'prop-types';
 import ReactGA from 'react-ga4';
-import Image from 'next/image';
 
 // Images
 const heroMobile = '/assets/imgs/hero/HeroScene-mobile.webp';
@@ -63,27 +62,23 @@ export default function Hero(props) {
                     </div>
                 </div>
                 {/* Artwork */}
-                <div className="w-full h-full col-[1/11] row-[1] place-self-end overflow-hidden">
-                    <div className="relative max-h-[calc(100vh-2rem)] w-full h-full">
+                <div className="col-[1/11] row-[1] place-self-end ">
+                    <div className="relative">
                         <picture>
                             <source
                                 srcSet={heroMobile}
                                 media="(max-width: 26.5625rem)"
                             />
-                            <Image
+                            <img
                                 src={heroDesktop}
                                 alt="A space cave background scene with warm yellow lighting"
-                                className="object-contain object-right-bottom"
-                                layout="fill"
-                                priority
+                                className="object-contain max-h-[calc(100vh-2rem)]"
                             />
                         </picture>
-                        <Image
+                        <img
                             src={astro}
                             alt="A cartoon astronaut falcon mascot in a space suit, floating in space"
-                            className="object-contain animate-wiggle animate-infinite animate-duration-[10000ms] animate-delay-1000 animate-ease-in-out"
-                            layout="fill"
-                            priority
+                            className="absolute bottom-[1%] right-[3%] h-[80%] w-[80%] object-contain animate-wiggle animate-infinite animate-duration-[10000ms] animate-delay-1000 animate-ease-in-out"
                         />
                     </div>
                 </div>

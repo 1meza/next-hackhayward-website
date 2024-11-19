@@ -1,4 +1,3 @@
-import Image from "next/image";
 import PropTypes from 'prop-types';
 import { BiLogoDiscord, BiLogoInstagram, BiLogoLinkedinSquare } from 'react-icons/bi';
 
@@ -76,12 +75,10 @@ export default function Footer(props) {
                         href="#home"
                         className="h-20 max-lg:h-16 max-sm:h-14 hover:scale-105 transition flex items-center"
                     >
-                        <Image
+                        <img
                             src={logo}
                             alt="HackHayward logo"
-                            className="w-16 md:w-20"
-                            width={74}
-                            height={74}
+                            className="w-14 md:w-20"
                             loading="lazy"
                         />
                         <p className="text-white text-xl font-exo2 font-medium pl-6">HackHayward</p>
