@@ -3,8 +3,8 @@
 import MLH from './MLH';
 
 // Images
-const logo = '/assets/imgs/others/Monotone Logo.webp';
-const hamburger = '/assets/imgs/others/hamburger_Icon.svg';
+const logo = '/assets/home/others/Monotone Logo.webp';
+const hamburger = '/assets/home/others/hamburger_Icon.svg';
 
 function NavButtons() {
     const links = [{ text: 'About' }, { text: 'FAQ' }, { text: 'Sponsor Us' }];

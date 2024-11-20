@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // Images
-const saturn = '/assets/imgs/Background/Saturn.webp';
+const saturn = '/assets/home/Background/Saturn.webp';
 
 FAQ.propTypes = {
     preRegister: PropTypes.string.isRequired,

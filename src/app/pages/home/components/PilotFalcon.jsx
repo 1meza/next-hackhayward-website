@@ -1,7 +1,7 @@
 // Images
-const escapeBG = '/assets/imgs/Scene5/The_eascape_background_s5.webp';
-const spaceShip = '/assets/imgs/Scene5/SpaceShip.webp';
-const UFO = '/assets/imgs/Scene5/UFO.webp';
+const escapeBG = '/assets/home/Scene5/The_eascape_background_s5.webp';
+const spaceShip = '/assets/home/Scene5/SpaceShip.webp';
+const UFO = '/assets/home/Scene5/UFO.webp';
 
 export default function PilotFalcon() {
     return (

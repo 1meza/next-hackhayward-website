@@ -4,9 +4,9 @@ import PropTypes from 'prop-types';
 import ReactGA from 'react-ga4';
 
 // Images
-const heroMobile = '/assets/imgs/hero/HeroScene-mobile.webp';
-const heroDesktop = '/assets/imgs/hero/HeroScene.webp';
-const astro = '/assets/imgs/hero/Astro.webp';
+const heroMobile = '/assets/home/hero/HeroScene-mobile.webp';
+const heroDesktop = '/assets/home/hero/HeroScene.webp';
+const astro = '/assets/home/hero/Astro.webp';
 
 Hero.propTypes = {
     preRegister: PropTypes.string.isRequired,

@@ -1,5 +1,5 @@
 // Images
-const uranus = '/assets/imgs/Background/Uranus.webp';
+const uranus = '/assets/home/Background/Uranus.webp';
 
 export default function Sponsor() {
     return (
