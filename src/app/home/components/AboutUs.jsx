@@ -1,8 +1,8 @@
 // Images
-const mars = '/assets/imgs/Background/Mars.webp';
-const scene2 = '/assets/imgs/Scene2/s2Full.webp';
-const scene3 = '/assets/imgs/Scene3/s3Full.webp';
-const jupiter = '/assets/imgs/Background/Jupiter.webp';
+const mars = '/assets/home/Background/Mars.webp';
+const scene2 = '/assets/home/Scene2/s2Full.webp';
+const scene3 = '/assets/home/Scene3/s3Full.webp';
+const jupiter = '/assets/home/Background/Jupiter.webp';
 
 export default function AboutUs() {
     return (

@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import { BiLogoDiscord, BiLogoInstagram, BiLogoLinkedinSquare } from 'react-icons/bi';
 
 // Images
-const logo = '/assets/imgs/others/Monotone Logo.webp';
+const logo = '/assets/home/others/Monotone Logo.webp';
 
 Footer.propTypes = {
     preRegister: PropTypes.string.isRequired,

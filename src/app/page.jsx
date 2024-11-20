@@ -1,25 +1,28 @@
 'use client'
 
+// Import home styles
+import "./home/home.css";
+
 import { useEffect, useState } from 'react';
-import Head from 'next/head';
 import ReactGA from 'react-ga4';
+//import Link from 'next/link';
 
 // Components
-import NotificationBar from './components/home/Notification';
-import NavBar from './components/home/NavBar';
-import Hero from './components/home/Hero';
-import FAQ from './components/home/FAQ';
-import AboutUs from './components/home/AboutUs';
-import Footer from './components/home/Footer';
-import PilotFalcon from './components/home/PilotFalcon';
-import Sponsor from './components/home/Sponsor';
+import NotificationBar from './home/components/Notification';
+import NavBar from './home/components/NavBar';
+import Hero from './home/components/Hero';
+import FAQ from './home/components/FAQ';
+import AboutUs from './home/components/AboutUs';
+import Footer from './home/components/Footer';
+import PilotFalcon from './home/components/PilotFalcon';
+import Sponsor from './home/components/Sponsor';
 
 export default function Home() {
     // Scroll to top on load
     useEffect(() => {
         setTimeout(() => {
             window.scrollTo(0, 0);
-        }, 1000); // Timeout due to announcements not loading right away
+        }, 500); // Timeout due to announcements not loading right away
     }, []);
 
     // Initialize Google Analytics
@@ -45,11 +48,6 @@ export default function Home() {
 
     return (
         <>
-            <Head>
-                <title>HackHayward</title>
-                <meta name="description" content="HackHayward Spring 2025 Home Page" />
-            </Head>
-
             <header id="home" className="overflow-x-hidden">
                 {display && <NotificationBar setDisplay={setDisplay} />}
                 <NavBar />
